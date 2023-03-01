@@ -1,0 +1,31 @@
+{% include "header.html" %}
+<nav>
+    <a href="/quiz">Quiz</a>
+</nav>
+{% block content %}
+        <div class="main-container">
+            <h3>{{ title }}</h3>
+            <form method="POST">
+            {% for line in lines %}
+                <div id="{{loop.index}}">
+                    <strong>{{ line[0] }}</strong><br>
+                    <input type="radio" name="q{{loop.index}}">{{ line[2] }}<br>
+                    <input type="radio" name="q{{loop.index}}">{{ line[3] }}<br>
+                    <input type="radio" name="q{{loop.index}}">{{ line[4] }}<br>
+                    <input type="radio" name="q{{loop.index}}">{{ line[5] }}<br>
+                    <input type="hidden" value="{{ line[1] }}"><br>
+                </div>
+            {% endfor %}
+            <input type="button" value="Check score" onclick="evaluate()">
+        </form>
+       </div>
+{% endblock %}
+<script>
+    function evaluate() {
+        result = "Here is the result\n";
+        result += "q1 - "+ document.getElementById("q1").checked
+        alert(result)
+    }
+</script>
+<hr>
+{% include "footer.html" %}

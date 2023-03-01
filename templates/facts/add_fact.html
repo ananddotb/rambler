@@ -1,0 +1,18 @@
+{% include "header.html" %}
+{% block content %}
+        <div class="main-container">
+            <h3>Add Facts</h3>
+            <h6>Fact Form</h6>
+            <p>
+               Form not open to public for obvious reasons  
+            </p>
+        <form action="{{url_for('add_fact')}}" method="post">
+            Title <input type="text" name="title" id="title" size="20"><br>
+            Fact <textarea name="fact" id="fact" rows="5" cols="50"></textarea><br>
+            Tag <input type="text" name="tag" id="tag" size="20"><br>
+            <input type="submit">
+        </form>
+        </div>
+{% endblock %}
+<hr>
+{% include "footer.html" %}

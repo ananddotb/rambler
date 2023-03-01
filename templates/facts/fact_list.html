@@ -1,0 +1,21 @@
+{{msg}}
+<table border = 1>
+    <thead>
+       <td>Title</td>
+       <td>Fact</td>
+       <td>Tag</td>
+       <td colspan="2">Action</td>
+    </thead>
+    
+    {% for row in rows %}
+       <tr>
+         <td>{{row['title']}}</td>
+         <td>{{row['fact']}}</td>
+         <td>{{row['tag']}}</td>
+         <td><a href="edit_fact?id={{row['id']}}">Edit</a></td>
+         <td>Delete</td>
+       </tr>
+    {% endfor %}
+ </table>
+ 
+ <a href = "/facts/add_fact">Add fact</a>

@@ -1,0 +1,29 @@
+{% include "header.html" %}
+{% block content %}
+        <div class="main-container">
+            <h3>Quiz</h3>
+            <h6>Multiple Choice Questions</h6>
+            <p>Check your answers to these questions. The questions are not the usual general knowledge kind - let's just say they are different.</p>
+            <strong>Todo</strong>
+            <p>In future updates, you will see the percentage of people who chose like you, or differed from you.</p>
+            <div style="background-color: rgb(116, 152, 230); line-height: 3em; padding-left: 1.5em;">
+        <!--    
+            <form method = "POST"
+                enctype = "multipart/form-data">
+                <input type = "file" name = "file" />
+                <input type = "submit" value="Upload"/>
+            </form>
+        -->
+            </div>
+            <ul>
+                {% for filename in filenames %}
+                <li>
+                    <a href="/quiz/{{filename.split('.')[0]}}">{{ filename }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            
+       </div>
+{% endblock %}
+<hr>
+{% include "footer.html" %}
