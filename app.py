@@ -50,14 +50,7 @@ abbs = {"CC":"Coordinating Conjunction",
         "WRB":"Abverb like where, when"
 }
 
-app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'ananddotb@gmail.com'
-app.config['MAIL_PASSWORD'] = 'King$2308'
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
 
-mail = Mail(app)
 thoughts = []
 thoughts_counter = -1
 
