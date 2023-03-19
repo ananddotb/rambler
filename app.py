@@ -106,9 +106,9 @@ def main():
 def about():
     return render_template("about.html")
 
-@app.route("/memoirs")
+@app.route("/people")
 def memoirs():
-    return render_template("memoirs/index.html")
+    return render_template("people/index.html")
 
 @app.route("/english")
 def english():
